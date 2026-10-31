@@ -1,0 +1,37 @@
+Experiment No. 3: Basic Visualization in Python
+
+Aim
+To create and understand different basic graphs and visualizations using Python and the Matplotlib library.
+
+Description
+Python is widely used for data analysis and visualization. Matplotlib is one of the most commonly used Python libraries for creating graphs and charts. It provides functions to represent numerical and categorical data in a graphical format.
+
+Basic visualizations help us understand data, compare values, identify patterns, and analyze relationships between variables. In this experiment, five types of visualizations are studied: line graph, bar graph, pie chart, histogram, and scatter plot.
+
+1. Line Graph
+A line graph represents data points connected by straight lines. It is mainly used to display trends and changes over time or across a sequence. For example, a line graph can show monthly sales, temperature changes, or student performance over several examinations.
+
+Sample Output: A line graph showing changes in values across different months, with connected points, a title, and labeled axes.
+
+2. Bar Graph
+A bar graph represents categorical data using rectangular bars. The height of each bar indicates the value of its category. It is useful for comparing values among different groups, such as marks in different subjects or sales of different products.
+
+Sample Output: A bar graph comparing values across different categories using separate bars, with a title and labeled axes.
+
+3. Pie Chart
+A pie chart is a circular graph divided into sectors. Each sector represents a category, and its size corresponds to that category's proportion of the total. It is useful for displaying percentage distributions and comparing parts of a whole.
+
+Sample Output: A circular chart divided into colored sectors representing different categories, with labels and a title.
+
+4. Histogram
+A histogram represents the frequency distribution of numerical data using adjacent rectangular bars. The data is grouped into intervals called bins, and each bar indicates the frequency of values within an interval. It helps understand the distribution and spread of data.
+
+Sample Output: A histogram showing the frequency distribution of numerical values using adjacent bars, with a title and labeled axes.
+
+5. Scatter Plot
+A scatter plot displays individual data points based on two numerical variables. It is used to identify relationships, patterns, clusters, and trends between variables. For example, it can show the relationship between study hours and marks obtained by students.
+
+Sample Output: A scatter plot displaying individual points on the X-axis and Y-axis, with a title and labeled axes.
+
+Result
+Thus, five basic visualizations — line graph, bar graph, pie chart, histogram, and scatter plot — were studied and created using Python and the Matplotlib library.
