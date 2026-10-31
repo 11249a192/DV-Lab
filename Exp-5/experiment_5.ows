@@ -1,0 +1,22 @@
+import pandas as pd
+
+# Read the CSV file
+data = pd.read_csv("expsales_data.csv")
+
+# Display the original data
+print("Original Data:")
+print(data)
+
+# Remove duplicate records
+cleaned_data = data.drop_duplicates(
+    subset=["OrderID", "Category", "Sales", "Quantity", "Product", "Region"]
+)
+
+# Display the cleaned data
+print("\nCleaned Data:")
+print(cleaned_data)
+
+# Save the cleaned data
+cleaned_data.to_csv("cleaned_sales_data.csv", index=False)
+
+print("\nCleaned data saved successfully!")
