@@ -1,0 +1,90 @@
+# Experiment No. 7: Creating a Scatter Plot Using Orange Data Mining
+
+## Aim
+To create a scatter plot in Orange Data Mining to study the relationship between two numerical variables in a dataset.
+
+## Description
+A scatter plot is a graphical representation used to examine the relationship between two numerical variables. Each point represents an observation, with one variable plotted on the horizontal axis and the other on the vertical axis.
+
+Orange Data Mining provides a Scatter Plot widget that allows users to select attributes for the X-axis and Y-axis, examine individual observations, and identify patterns, clusters, and possible outliers.
+
+## Software Required
+- Orange Data Mining
+- A CSV dataset containing suitable numerical attributes
+
+## Widgets Used
+
+| Widget | Purpose |
+|---|---|
+| CSV File Import | Imports the dataset into Orange. |
+| Data Table | Displays the imported records and allows rows to be selected. |
+| Scatter Plot | Visualizes the relationship between two numerical attributes. |
+
+## Algorithm
+1. Start Orange Data Mining.
+2. Add the CSV File Import widget and load the required dataset.
+3. Connect CSV File Import to Data Table.
+4. Open Data Table to verify the records and available attributes.
+5. Add the Scatter Plot widget to the workflow.
+6. Connect the selected dataset from Data Table to Scatter Plot.
+7. Choose a numerical attribute for the X-axis.
+8. Choose another numerical attribute for the Y-axis.
+9. Observe the plotted points and identify any trends, clusters, or outliers.
+10. Save the workflow.
+
+## Workflow Diagram
+
+```text
+CSV File Import
+       |
+       v
+   Data Table
+       |
+       | Selected Data
+       v
+   Scatter Plot
+```
+
+**Note:** Your provided workflow uses the **Selected Data** output from Data Table. If no rows are selected, the Scatter Plot may receive no records. To plot the entire dataset, connect the main **Data** output from CSV File Import directly to Scatter Plot, or select the required rows in Data Table.
+
+## Procedure
+
+### 1. Import the Data
+- Open Orange Data Mining.
+- Add CSV File Import.
+- Browse for the CSV dataset and import it.
+- Check that the column headers and data types are correct.
+
+### 2. Display the Dataset
+- Add Data Table.
+- Connect the output of CSV File Import to Data Table.
+- Open the widget and inspect the imported records.
+
+### 3. Create the Scatter Plot
+- Add Scatter Plot to the workflow.
+- Connect Data Table to Scatter Plot.
+- Open the Scatter Plot widget.
+- Select the required numerical attributes for the X-axis and Y-axis.
+
+For a sales dataset, suitable choices could include:
+- **X-axis:** Quantity
+- **Y-axis:** Sales
+
+The actual axis selections depend on the attributes available in the imported dataset.
+
+### 4. Analyze the Visualization
+- Observe how the points are distributed.
+- Look for an upward or downward trend.
+- Identify groups of observations that appear close together.
+- Check for points that are far from the rest of the data.
+
+A scatter plot can suggest a relationship between variables, but it does not by itself establish causation.
+
+### 5. Save the Workflow
+Save the Orange workflow as `Exp7_Scatter_Plot.ows`.
+
+## Expected Output
+A scatter plot containing points representing the selected observations, with the chosen variable on each axis. If `Quantity` and `Sales` are selected, the plot will help examine how sales values vary with quantity.
+
+## Result
+Thus, a scatter plot was created succesfully using the orange data mining.
