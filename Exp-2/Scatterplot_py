@@ -1,0 +1,62 @@
+# EXPERIMENT: SCATTER PLOT USING PYTHON
+
+## AIM
+To create a scatter plot using Python's Matplotlib library to visualize the relationship between study hours and marks.
+
+## ALGORITHM
+1. Start the program.
+2. Import the Matplotlib library.
+3. Define the study hours and corresponding marks.
+4. Use the `plt.scatter()` function to create the scatter plot.
+5. Add a title to the plot.
+6. Label the X-axis and Y-axis.
+7. Display the plot using `plt.show()`.
+8. Stop the program.
+
+## DESCRIPTION
+A scatter plot is a data visualization technique used to show the relationship between two numerical variables. It represents each observation as an individual point on a graph.
+
+Python's Matplotlib library provides the `scatter()` function to create scatter plots. In this program, study hours are represented on the X-axis and marks are represented on the Y-axis. The plotted points help us understand the relationship between study hours and marks.
+
+## PROGRAM
+
+import matplotlib.pyplot as plt
+hours = [1, 2, 3, 4, 5, 6]
+marks = [45, 50, 58, 65, 72, 80]
+plt.scatter(hours, marks)
+plt.title("Study Hours vs Marks")
+plt.xlabel("Study Hours")
+plt.ylabel("Marks")
+plt.show()
+
+## PROGRAM EXPLANATION
+1. `import matplotlib.pyplot as plt` – Imports the Matplotlib plotting module.
+2. `hours = [1, 2, 3, 4, 5, 6]` – Stores the study hours.
+3. `marks = [45, 50, 58, 65, 72, 80]` – Stores the corresponding marks.
+4. `plt.scatter(hours, marks)` – Creates the scatter plot using individual points.
+5. `plt.title("Study Hours vs Marks")` – Sets the title of the plot.
+6. `plt.xlabel("Study Hours")` – Labels the X-axis.
+7. `plt.ylabel("Marks")` – Labels the Y-axis.
+8. `plt.show()` – Displays the scatter plot.
+
+## SAMPLE OUTPUT
+
+```text
+A scatter plot titled "Study Hours vs Marks" is displayed.
+
+X-axis: Study Hours
+Y-axis: Marks
+
+Study Hours    Marks
+     1           45
+     2           50
+     3           58
+     4           65
+     5           72
+     6           80
+```
+
+The scatter plot displays six points. The points show an increasing trend, indicating that higher study hours are associated with higher marks in this sample dataset.
+
+## RESULT
+Thus, a scatter plot was successfully created using Python's Matplotlib library to visualize the relationship between study hours and marks.
