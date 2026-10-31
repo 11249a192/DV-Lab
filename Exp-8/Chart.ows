@@ -1,0 +1,94 @@
+ Experiment No. 8: Creating Charts and Graphs Using Orange Data Mining
+
+## Aim
+To create and examine different graphical representations of a dataset using Orange Data Mining for effective data exploration and interpretation.
+
+## Description
+Data visualization presents information graphically so that patterns, differences, and relationships can be understood more easily. Orange Data Mining provides visual programming widgets that allow users to generate charts without writing code.
+
+In this experiment, a dataset is imported and displayed in a table. The Distributions widget is used to examine the distribution of selected attributes, Line Plot helps visualize changes across observations or selected variables, and Bar Plot supports comparisons between categories.
+
+## Software Required
+- Orange Data Mining
+- A comma-separated dataset containing fields such as `Category`, `Sales`, and `Quantity`
+
+## Widgets Used
+
+| Widget | Function |
+|---|---|
+| CSV File Import | Loads the dataset. |
+| Data Table | Displays the records in rows and columns. |
+| Distributions | Shows the distribution of selected attributes. |
+| Line Plot | Visualizes patterns or changes across selected variables. |
+| Bar Plot | Compares values across categories. |
+
+## Algorithm
+1. Launch Orange Data Mining.
+2. Add CSV File Import and load the required dataset.
+3. Connect the imported data to Data Table.
+4. Inspect the records and verify the available attributes.
+5. Add Distributions, Line Plot, and Bar Plot to the workflow.
+6. Connect the Data Table output to each visualization widget.
+7. Select the attributes required for each graph.
+8. Examine the generated visualizations and compare the displayed values.
+9. Interpret the patterns observed in the charts.
+10. Save the workflow for future use.
+
+## Workflow Diagram
+
+```text id="f4k8mx"
+                  +--> Distributions
+                  |
+CSV File Import --> Data Table --> Line Plot
+                  |
+                  +--> Bar Plot
+```
+
+**Connection note:** The provided workflow sends **Selected Data** from Data Table to the three visualization widgets. If no rows are selected, the plots may be empty. To visualize all records, connect the main **Data** output from CSV File Import directly to each visualization widget, or select the required rows in Data Table.
+
+## Procedure
+
+### 1. Import the Dataset
+- Open Orange Data Mining.
+- Add CSV File Import to the canvas.
+- Load the required comma-separated file.
+- Check the column names and ensure numerical fields such as `Sales` and `Quantity` are recognized correctly.
+
+### 2. Display the Records
+- Add Data Table.
+- Connect CSV File Import to Data Table.
+- Open the table and inspect the imported records.
+
+### 3. Generate a Distribution Chart
+- Add the Distributions widget.
+- Connect the dataset to it.
+- Select an attribute such as `Category` or `Sales`.
+- Observe how the values or categories are distributed.
+
+### 4. Create a Line Plot
+- Add the Line Plot widget.
+- Connect the dataset.
+- Select suitable attributes using the widget controls.
+- Observe the patterns across the selected observations or variables.
+
+### 5. Create a Bar Plot
+- Add Bar Plot to the workflow.
+- Connect the dataset.
+- Select `Category` as the grouping attribute, where supported, and use a suitable numerical variable such as `Sales`.
+- Examine the differences between categories.
+
+### 6. Save the Workflow
+Arrange the widgets clearly and save the workflow as `Exp8_Charts_and_Graphs.ows`.
+
+## Expected Output
+The completed workflow should display:
+
+- A table containing the imported records.
+- A distribution chart for a selected attribute.
+- A line plot illustrating patterns in the selected data.
+- A bar plot for comparing values or categories.
+
+The exact appearance of each chart depends on the dataset and the attributes selected in the widget settings.
+
+## Result
+Thus, different visualizations were created using the orange data mining.
