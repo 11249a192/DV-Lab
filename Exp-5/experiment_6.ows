@@ -1,0 +1,103 @@
+# Experiment No. 6: Data Aggregation and Statistical Analysis Using Orange Data Mining
+
+## Aim
+To examine a dataset using Orange Data Mining and obtain summary information, statistical measures, and data distributions for effective data analysis.
+
+## Description
+Orange Data Mining is a visual data analysis tool that allows users to explore datasets through interconnected widgets without writing extensive code. It provides tools for inspecting records, understanding column properties, calculating descriptive statistics, and visualizing the distribution of data.
+
+In this experiment, a CSV file is imported into Orange and passed through a sequence of widgets. The Data Info widget displays general information about the dataset, Column Statistics presents statistical details for individual attributes, and Distributions helps visualize the frequency distribution of selected variables.
+
+## Software Required
+- Orange Data Mining
+- A CSV dataset containing fields such as `OrderID`, `Product`, `Category`, `Sales`, `Quantity`, and `Region`
+
+## Widgets Used
+
+| Widget | Purpose |
+|---|---|
+| CSV File Import | Loads the dataset into Orange. |
+| Data Table | Displays records in tabular form and allows row selection. |
+| Data Info | Shows information about the imported data. |
+| Column Statistics | Provides statistical summaries of attributes. |
+| Distributions | Displays the distribution of selected variables. |
+
+## Algorithm
+1. Launch Orange Data Mining.
+2. Add the CSV File Import widget to the workflow.
+3. Load the required dataset and verify the imported columns.
+4. Connect CSV File Import to Data Table.
+5. Connect the Data Table output to Data Info, Column Statistics, and Distributions.
+6. Inspect the dataset information using Data Info.
+7. Examine the available statistics for numerical and categorical attributes using Column Statistics.
+8. Select suitable variables, such as `Sales`, `Quantity`, or `Category`, in the visualization widgets.
+9. Interpret the summaries and distributions to identify patterns in the data.
+10. Save the Orange workflow for future use.
+
+## Workflow Connections
+
+The widgets are connected as follows:
+
+```text
+CSV File Import
+       |
+       v
+   Data Table
+       |
+       +------> Data Info
+       |
+       +------> Column Statistics
+       |
+       +------> Distributions
+```
+
+**Important:** In the provided workflow, Data Info, Column Statistics, and Distributions receive the **Selected Data** output from Data Table. If no rows are selected, these widgets may not receive the full dataset. To analyze all records, connect the main **Data** output from CSV File Import directly to the analysis widgets, or select all required rows in Data Table.
+
+## Procedure
+
+### 1. Import the Dataset
+- Open Orange Data Mining.
+- Add the CSV File Import widget.
+- Browse to the required CSV file and load it.
+- Confirm that the column names and data types are recognized correctly.
+
+### 2. Inspect the Records
+- Add a Data Table widget.
+- Connect the CSV File Import output to Data Table.
+- Open the table to examine the records and identify the available fields.
+
+### 3. View Dataset Information
+- Add the Data Info widget.
+- Connect it to the dataset.
+- Inspect the information displayed about the dataset, including the available records, attributes, and variable types as supported by the widget.
+
+### 4. Examine Column Statistics
+- Add Column Statistics to the workflow.
+- Connect the dataset to this widget.
+- Select numerical attributes such as `Sales` and `Quantity`.
+- Review the statistical information displayed for the selected attributes.
+
+### 5. Visualize Data Distributions
+- Add the Distributions widget.
+- Choose an attribute such as `Category`, `Region`, or `Sales`.
+- Observe the resulting distribution and compare the values or categories.
+
+### 6. Save the Workflow
+- Arrange the widgets clearly.
+- Save the workflow as `Exp6_Data_Aggregation.ows`.
+
+## Expected Output
+The workflow should display the imported records, dataset information, column-level statistics, and distributions of the selected variables.
+
+For the sample sales dataset containing six records:
+
+- **Total Sales:** 115,000
+- **Total Quantity:** 17
+- **Minimum Sales:** 3,000
+- **Maximum Sales:** 55,000
+- **Average Sales:** 19,166.67
+
+These values can be verified using the dataset's `Sales` and `Quantity` columns. The exact statistics displayed by Column Statistics depend on the selected attribute and the Orange version.
+
+## Result
+Thus, the dataset was imported and succesfully using orange data mining.
