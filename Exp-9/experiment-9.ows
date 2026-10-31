@@ -1,0 +1,93 @@
+# Experiment No. 9: Creating Basic Visualizations Using Orange Data Mining
+
+## Aim
+To create and analyze different data visualizations, including bar plots, scatter plots, and distribution plots, using Orange Data Mining.
+
+## Description
+Orange Data Mining is a visual programming tool used for data analysis, machine learning, and data visualization. It provides a drag-and-drop interface that allows users to import datasets, inspect data, and generate graphical representations without writing extensive code.
+
+In this experiment, a CSV dataset is imported using the **CSV File Import** widget. The **Data Table** widget displays the imported records, while the **Bar Plot**, **Scatter Plot**, and **Distributions** widgets help analyze sales values, relationships between numerical variables, and the distribution of data.
+
+## Applications
+- Analyzing sales and quantity information.
+- Comparing sales values across product categories.
+- Identifying relationships between sales and quantity.
+- Understanding the distribution of categorical and numerical data.
+- Presenting data in graphical form for easier interpretation.
+
+## Algorithm
+1. Start the Orange Data Mining application.
+2. Add the **CSV File Import** widget to the workflow.
+3. Import the dataset containing Category, Region, Sales, and Quantity columns.
+4. Configure the CSV import settings to recognize the first row as the header and use a comma as the delimiter.
+5. Connect the CSV File Import widget to the Data Table widget.
+6. Open Data Table and verify that the dataset has been imported correctly.
+7. Connect the Data Table widget to the Bar Plot, Scatter Plot, and Distributions widgets.
+8. Select the appropriate rows in Data Table if using the Selected Data connections.
+9. In Bar Plot, select Sales to compare sales values.
+10. In Scatter Plot, select Sales for the X-axis and Quantity for the Y-axis. Use Category to distinguish data points by category if desired.
+11. In Distributions, select Category to examine category frequencies or choose a numerical variable to inspect its distribution.
+12. Observe and interpret the generated visualizations.
+13. Save the Orange workflow.
+
+## Sample Dataset
+
+Save the following data as `dashboards.csv` or as a comma-separated `dashboards.txt` file.
+
+```csv
+Category,Region,Sales,Quantity
+Electronics,South,55000,2
+Electronics,North,20000,3
+Furniture,West,30000,4
+Furniture,South,25000,2
+Electronics,East,15000,5
+Furniture,South,40000,3
+```
+
+## Procedure
+
+### 1. Import the Dataset
+- Open Orange Data Mining.
+- Add the **CSV File Import** widget.
+- Browse for `dashboards.csv` or `dashboards.txt`.
+- Set the delimiter to a comma and identify the first row as the header.
+- Verify that the four columns are recognized correctly.
+
+### 2. Display the Dataset
+- Add the **Data Table** widget.
+- Connect CSV File Import to Data Table.
+- Open Data Table to inspect the imported records.
+
+### 3. Create a Bar Plot
+- Add the **Bar Plot** widget.
+- Connect Data Table to Bar Plot.
+- Select the `Sales` variable.
+- Examine the bar plot to compare sales values across the records or groups supported by the widget configuration.
+
+### 4. Create a Scatter Plot
+- Add the **Scatter Plot** widget.
+- Connect Data Table to Scatter Plot.
+- Set `Sales` as the X-axis and `Quantity` as the Y-axis.
+- Optionally, use `Category` as the point color to distinguish categories.
+- Observe the relationship between sales and quantity.
+
+### 5. Analyze Distributions
+- Add the **Distributions** widget.
+- Connect Data Table to Distributions.
+- Select `Category` to examine the frequency of records in each category.
+- Select `Sales` or `Quantity` to explore the distribution of numerical values.
+
+### 6. Save the Workflow
+- Verify that the visualizations display the expected data.
+- Save the workflow as an Orange `.ows` file for future use.
+
+**Important:** In this workflow, the three visualization widgets receive the Data Table's **Selected Data** output. Select the required rows in Data Table before opening the plots. To visualize the entire dataset without selecting rows, connect the Data Table's **Data** output directly to each visualization widget instead.
+
+## Expected Output
+1. A data table displaying the imported dataset.
+2. A bar plot for analyzing sales values.
+3. A scatter plot showing the relationship between Sales and Quantity.
+4. A distribution plot showing category frequencies or the distribution of a selected numerical variable.
+
+## Result
+The Orange Data Mining workflow is configured to import a CSV dataset and generate bar plot, scatter plot, and distribution visualizations. These visualizations help examine sales values, relationships between variables, and data distributions.
